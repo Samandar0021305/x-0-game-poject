@@ -1,3 +1,12 @@
+let btn = document.querySelector('.wrapper-btn')
+let wrapper = document.querySelector(".wrapper")
+let header = document.querySelector(".header")
+btn.addEventListener('click',()=>{
+ wrapper.classList.add("isWrapper")
+ header.classList.add("isHeader")
+})
+
+
 let elBox = document.querySelector(".box")
 
 let isX = true

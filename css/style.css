@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .box{
     display: flex;
     width: 310px;
@@ -22,4 +23,49 @@
 }
 .header{
     display: none;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+
+}
+.wrapper-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.wrapper-title{
+    font-size: 30px;
+}
+
+.wrapper-btn{
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.isWrapper{
+    display: none;
+}
+.isHeader{
+    display: block;
+}
+.header-box{
+    display: flex;
+    justify-content: center;
+}
+.header-box div{
+    margin: 0 70px;
+}
+.header-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-wrap button{
+    cursor: pointer;
+    padding: 5px 15px;
 }
