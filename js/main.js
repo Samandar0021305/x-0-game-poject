@@ -1,23 +1,55 @@
 let btn = document.querySelector('.wrapper-btn')
 let wrapper = document.querySelector(".wrapper")
 let header = document.querySelector(".header")
+let headerBtn = document.querySelector('.header-btn')
+let cell = document.querySelectorAll(".cell")
+let xEl = document.getElementById("xEl")
+let oEl = document.getElementById("0El")
+
 btn.addEventListener('click',()=>{
  wrapper.classList.add("isWrapper")
  header.classList.add("isHeader")
 })
 
 
-let elBox = document.querySelector(".box")
-
 let isX = true
 
 let arrX = []
 let arr0 = []
+let gameOur = false
 
 let message = ""
 
-let gameOur = false
-elBox.addEventListener("click",(e)=>{
+
+let elBox = document.querySelector(".box")
+
+let i = 0
+let j = 0
+
+
+
+
+
+headerBtn.addEventListener('click',()=>{
+    cell.forEach(val=>{
+        val.textContent = ""
+    })
+    gameOur = false
+    isX = true
+    arrX = []
+    arr0 = []
+    xEl.textContent = i
+    oEl.textContent = j
+})
+
+
+
+
+
+
+function game(e){
+
+
     if(gameOur){
         return
     }
@@ -50,8 +82,9 @@ elBox.addEventListener("click",(e)=>{
         (arrX.includes(1) && arrX.includes(5) && arrX.includes(9)) ||
         (arrX.includes(3) && arrX.includes(5) && arrX.includes(7))      
     ){
-      message = "x win"
+      message = 1
       gameOur = true
+      i++
     }
 
 
@@ -63,7 +96,10 @@ elBox.addEventListener("click",(e)=>{
     (arr0.includes(3) && arr0.includes(6) && arr0.includes(9)) ||
     (arr0.includes(1) && arr0.includes(5) && arr0.includes(9)) ||
     (arr0.includes(3) && arr0.includes(5) && arr0.includes(7)) ){
-        message = "0 win"
+        message = 2
         gameOur = true
+        j++
     }
-})
+}
+
+elBox.addEventListener('click',game)
