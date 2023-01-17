@@ -4,10 +4,16 @@ let isX = true
 
 elBox.addEventListener("click",(e)=>{
     if(isX){
-        e.target.textContent = "X"
+        if(e.target.textContent === ""){
+            e.target.textContent = "X"
+            isX = !isX
+        }
     }else{
-        e.target.textContent = '0'
+        if(e.target.textContent === ""){
+            e.target.textContent = '0'
+            isX = !isX
+ 
+        }
     }
 
-    isX = !isX
 })
