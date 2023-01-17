@@ -54,6 +54,7 @@
     display: block;
 }
 .header-box{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
