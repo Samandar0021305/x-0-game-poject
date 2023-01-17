@@ -20,3 +20,6 @@
     cursor: pointer;
     font-size: 83px;
 }
+.header{
+    display: none;
+}
